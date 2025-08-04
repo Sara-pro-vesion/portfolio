@@ -19,54 +19,11 @@ button{
     font-weight: 600;
     cursor: pointer;
     position: relative;
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
     border-radius: 2rem;
 }
 button:active{
     top: 4px;
   left: 4px;
   box-shadow: none;
-}
-.morphing {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50% 50% 60% 60% / 60% 60% 100% 100%; /* water drop shape */
-  background: #3498db;
-  color: transparent;
-  animation: fallandgo 1s ease-in forwards;
-}
-
-@keyframes fallandgo {
-  0% {
-    transform: translateY(0);
-    
-  }
-  100% {
-    transform: translateY(47.5vh);
-   
-  }
-}
-
-.splash {
-  position:absolute;
-  width:40px;
-  height: 10px;
-  background-color: #3498db;
-  border-radius: 50%;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: splasheffect 0.5s ease-in forwards;
-  pointer-events: none;
-}
-@keyframes splasheffect {
-  0% {
-    transform: translateX(-50%) scale(0.2);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) scale(20);
-    opacity: 0;
-  }
 }
