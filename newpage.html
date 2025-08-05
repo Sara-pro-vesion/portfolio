@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - New Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #060010;
+            color: #d1cfcf;
+            text-align: center;
+            padding: 0.2rem;
+        }
+        .hero-section {
+            background-color: #3333;
+            padding: 1.5rem;
+            ;
+            height: 80vh;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row: 1fr;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
+        .hero-content {
+            grid-column: 1/ span 3;
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            width: 100%;
+            margin: 0 1rem;
+            text-align: left;
+        }
+        .btn-cv {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            color: #dfdbdb;
+            background-color: #3333;
+            border: 1px solid #dfdbdb;
+            padding: 10px 30px;
+            border-radius: 13px;
+            cursor: pointer;
+            margin: 1rem 1rem ;
+        }
+        .btn-cv:hover {
+            background-color: #29183b86;
+            color: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease
+        }
+        .hero-section img {
+            width:21rem;
+            grid-column: 4;
+            grid-row: 1;
+        }
+        nav {
+    position: fixed;
+    width: 30%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 3rem;
+    top: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 5rem;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.158);
+}
+span {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #d1cfcf;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+}
+span:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+    </style>        
+</head>
+<body>
+    <div class="rays-background"></div>
+    <nav> 
+        <span>about</span>
+        <span>projects</span>
+        <span>contact</span>
+    </nav>
+    <main>
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>Sara can <b style="text-shadow: 0 0 8px rgb(162, 0, 255);">light</b> your business</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius consectetur voluptatem qui vel dolorem inventore veniam rerum delectus vitae, quae, earum adipisci blanditiis aperiam facilis!</p>
+          <button class="btn-cv">cv</button>
+        </div>
+        <img src="photo_portfolio_rm.png">
+      </div>
+
+    </main>
+</body>
+</html>

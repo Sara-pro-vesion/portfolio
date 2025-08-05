@@ -3,6 +3,25 @@ body{
     background-color: #1b1b1b;
     overflow: hidden;
 }
+#phrase {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -250%);
+    color: white;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+@media screen and (max-width: 800px) {
+    #phrase {
+        font-size: 1.5rem;
+        transform: translate(-50%, -150%);
+        white-space: normal;
+    }
+    
+}
 .portfolio-btn {
     position: absolute;
     top: 50%;
@@ -19,7 +38,7 @@ button{
     font-weight: 600;
     cursor: pointer;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
     border-radius: 2rem;
 }
 button:active{
@@ -27,3 +46,4 @@ button:active{
   left: 4px;
   box-shadow: none;
 }
+
