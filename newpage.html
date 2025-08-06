@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - New Page</title>
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Lora:ital,wght@0,400..700;1,400..700&family=Young+Serif&display=swap" rel="stylesheet">
+ <style>
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #060010;
+            font-family: 'manrope', sans-serif;
+            background-color: #0A0E23;
             color: #d1cfcf;
             text-align: center;
             padding: 0.2rem;
         }
         .hero-section {
-            background-color: #3333;
-            padding: 1.5rem;
+            background-color: #1E2A4A;
+            padding: 2rem;
             height: 80vh;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
@@ -23,62 +27,68 @@
             grid-row: 1fr;
             align-items: center;
             justify-items: center;
-            overflow: hidden;
             position: relative;
+            margin: 1rem;
+            border-radius: 1rem;
+            z-index: 0;
+             overflow: hidden;
         }
         .hero-content {
-            grid-column: 1/ span 3;
-            font-family: "Josefin Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
+            grid-column: 1/ span 2;
             width: 100%;
             margin: 0 1rem;
             text-align: left;
             position: relative;
             z-index: 2;
+            font-weight: 100;
+            color: #F4F6FB;
+        }
+        .hero-content h1 {
+            font-family: 'Young Serif', sans-serif;
+            font-weight: 500;
+            font-size: calc(2.5*16px);
+            white-space: nowrap;
+            line-height: 100%;
+        }
+        .hero-content p {
+            font-size: 1.25rem;
+            font-weight: 200;
+            color: #d1cfcf9c;
+            line-height: 150%;
+            font-family: "Lora", serif;
         }
         .btn-cv {
-            font-family: "Josefin Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
+            font-family: "caprasimo", sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
             color: #dfdbdb;
             background-color: #3333;
             border: 1px solid #dfdbdb;
-            padding: 10px 30px;
+            padding: 10px 40px;
             border-radius: 13px;
             cursor: pointer;
-            margin: 1rem 1rem ;
+            margin-top: 8px;
+            
         }
         .btn-cv:hover {
-            background-color: #29183b86;
+            background-color: #00ffd062;
             color: #ffffff;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             transition: background-color 0.3s ease, color 0.3s ease
         }
         .hero-section img {
-            width: 21rem;
+            width: 23rem;
             z-index: 1;
             opacity: 0.7;
             pointer-events: none;
+            grid-column: 4;
         }
         nav {
-    position: fixed;
-    width: 30%;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    z-index: 1;
-    border-radius: 3rem;
-    top: 1.8rem;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 4rem;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.158);
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            letter-spacing: 0.1rem;
+            font-family: "caprasimo", sans-serif;
         }
                 @media screen and (max-width: 768px) {
                     nav {
@@ -146,7 +156,7 @@
                     .hero-content {
                         grid-column: 1 /span 1.2;
                         margin-left: 10rem;
-                        font-size: 2rem;
+                    
                     }
                     .btn-cv {
                         border-radius: 1.5rem;
@@ -165,20 +175,35 @@
                 }
 
         span {
-            font-family: "Josefin Sans", sans-serif;
-            font-optical-sizing: auto;
             font-weight: 500;
-            font-style: normal;
             color: #d1cfcf;
             cursor: pointer;
             transition: color 0.3s ease;
-            
+            padding: 1rem;
         }
         span:hover {
-            color: #ffffff;
+            color: #00FFD1;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             transition: background-color 0.3s ease, color 0.3s ease;
 
+        }
+        .dots-bg {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient( #00FFD1 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.2;
+            z-index: -1;
+            animation: dotsMove 10s linear infinite;
+        }
+        @keyframes dotsMove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(80px, 80px);
+            }
         }
     </style>        
 </head>
@@ -191,8 +216,9 @@
     </nav>
     <main>
       <div class="hero-section">
+        <div class="dots-bg"></div>
         <div class="hero-content">
-          <h1>Sara can <b style="text-shadow: 0 0 8px rgb(162, 0, 255);">light</b> your business</h1>
+          <h1>  Sara can <b style="text-shadow: 0 0 8px #00FFD1;">light</b> your work</h1>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius consectetur voluptatem qui vel dolorem inventore veniam rerum delectus vitae, quae, earum adipisci blanditiis aperiam facilis!</p>
           <button class="btn-cv">cv</button>
         </div>
