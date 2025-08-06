@@ -15,7 +15,6 @@
         .hero-section {
             background-color: #3333;
             padding: 1.5rem;
-            ;
             height: 80vh;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
@@ -25,6 +24,7 @@
             align-items: center;
             justify-items: center;
             overflow: hidden;
+            position: relative;
         }
         .hero-content {
             grid-column: 1/ span 3;
@@ -35,6 +35,8 @@
             width: 100%;
             margin: 0 1rem;
             text-align: left;
+            position: relative;
+            z-index: 2;
         }
         .btn-cv {
             font-family: "Josefin Sans", sans-serif;
@@ -56,9 +58,10 @@
             transition: background-color 0.3s ease, color 0.3s ease
         }
         .hero-section img {
-            width:21rem;
-            grid-column: 4;
-            grid-row: 1;
+            width: 21rem;
+            z-index: 1;
+            opacity: 0.7;
+            pointer-events: none;
         }
         nav {
     position: fixed;
@@ -67,31 +70,116 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-items: center;
     z-index: 1;
     border-radius: 3rem;
     top: 1.8rem;
     left: 50%;
     transform: translateX(-50%);
-    gap: 5rem;
+    gap: 4rem;
     box-shadow: 0 0 10px rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.158);
-}
-span {
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color: #d1cfcf;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    
-}
-span:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    transition: background-color 0.3s ease, color 0.3s ease;
+        }
+                @media screen and (max-width: 768px) {
+                    nav {
+                        width: 30%;
+                        height: 2.5rem;
+                        font-size: 0.8rem;
+                        gap: 1.5rem;
+                    }
+                    .hero-section img {
+                        width: 17.5rem;
+                    }
+                }
+                @media screen and (max-width: 480px) {
+                    nav {
+                        width: 50%;
+                        height: 2.5rem;
+                        font-size: 0.8rem;
+                        gap: 1rem;
+                    }
+                    .hero-section img {
+                        width: 18rem;
+                        z-index: -1;
+                        position: absolute;
+                    }
+                    .hero-section.btn-cv{
+                    margin: 0rem;
 
-}
+                    }
+                    .hero-section {
+                        height: auto;
+                    }
+                    .hero-content {
+                        z-index: 1;
+                        white-space:break-spaces;
+                        text-align: center;
+                        padding: auto;
+                        margin-left: 50% ;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 1rem;
+                    }
+
+                    .hero-content h1 {
+                        white-space: normal;
+                    }
+                    nav {
+                        position: sticky;
+                    }
+                }
+                @media screen and (min-width: 1435px) {
+                    .hero-content {
+                        grid-column: 1 / span 2;
+                    }
+                    .hero-section img {
+                        width: 20rem;
+                        grid-column: 4;
+                    }
+                }
+                @media screen and (min-width: 1460px) {
+                       .hero-section img {
+                        width: 40rem;
+                        grid-column: 4;
+                       }
+                    .hero-content {
+                        grid-column: 1 /span 1.2;
+                        margin-left: 10rem;
+                        font-size: 2rem;
+                    }
+                    .btn-cv {
+                        border-radius: 1.5rem;
+                        font-size: 1.7rem;
+                        padding: 1rem 4rem;
+                    }
+                    nav {
+                        width: 20%;
+                        height: 3rem;
+                        font-size: 1.2rem;
+                        gap: 6rem;
+                    }
+                    nav span {
+                        font-size: 1.5rem;
+                    }
+                }
+
+        span {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            color: #d1cfcf;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            
+        }
+        span:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+        }
     </style>        
 </head>
 <body>
@@ -108,7 +196,7 @@ span:hover {
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius consectetur voluptatem qui vel dolorem inventore veniam rerum delectus vitae, quae, earum adipisci blanditiis aperiam facilis!</p>
           <button class="btn-cv">cv</button>
         </div>
-        <img src="photo_portfolio_rm.png">
+        <img src="photo_portfolio_rm_blue-removebg-preview.png">
       </div>
 
     </main>
