@@ -91,54 +91,40 @@
             font-family: "caprasimo", sans-serif;
         }
                 @media screen and (max-width: 768px) {
-                    nav {
-                        width: 30%;
-                        height: 2.5rem;
-                        font-size: 0.8rem;
-                        gap: 1.5rem;
-                    }
                     .hero-section img {
                         width: 17.5rem;
+                        z-index: -1;
                     }
                 }
                 @media screen and (max-width: 480px) {
-                    nav {
-                        width: 50%;
-                        height: 2.5rem;
-                        font-size: 0.8rem;
-                        gap: 1rem;
-                    }
-                    .hero-section img {
-                        width: 18rem;
-                        z-index: -1;
-                        position: absolute;
-                    }
-                    .hero-section.btn-cv{
-                    margin: 0rem;
-
-                    }
                     .hero-section {
+                        position: relative;
+                        display: block; /* or flex if you prefer */
                         height: auto;
                     }
+                    .hero-section img {
+                        width: 15rem;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 0;
+                        opacity: 0.5;
+                    }
                     .hero-content {
+                        position: relative;
                         z-index: 1;
-                        white-space:break-spaces;
-                        text-align: center;
-                        padding: auto;
-                        margin-left: 50% ;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        padding-top: 1rem;
                     }
-
                     .hero-content h1 {
-                        white-space: normal;
-                    }
-                    nav {
-                        position: sticky;
+                        font-size: 2rem;
+                        white-space: normal; /* Allow wrapping */
                     }
                 }
+                @media screen and (width: 1024px) {
+                    .hero-section {
+                        height: auto;
+                }
+            }
                 @media screen and (min-width: 1435px) {
                     .hero-content {
                         grid-column: 1 / span 2;
@@ -205,6 +191,55 @@
                 transform: translate(80px, 80px);
             }
         }
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row: 1fr, 1fr;
+            gap: 1rem;
+            padding: 8rem;
+            padding-bottom: 20rem;
+            gap: 1rem;
+        }
+        .card1, .card2, .card3, .card4, .card5 {
+            background-color: #1E2A4A;
+            border-radius: 10px;
+            padding: 1rem;
+            color: #d1cfcf;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .card1-img, .card2-img, .card3-img, .card4-img, .card5-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            background-color: #d1cfcf8c;
+        }
+        .card3-img  {
+            height: 400px;
+        }
+        .card1 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .card2 {
+            grid-column: 2/span 2;
+            grid-row: 1;
+        }
+        .card3 {
+            grid-column: 4;
+            grid-row:1 /span 2;
+        }
+        .card4 {
+            grid-column: 1/span 2;
+            grid-row: 2;
+        }
+        .card5 {
+            grid-column: 3;
+            grid-row: 2;
+        }
     </style>        
 </head>
 <body>
@@ -223,6 +258,50 @@
           <button class="btn-cv">cv</button>
         </div>
         <img src="photo_portfolio_rm_blue-removebg-preview.png">
+      </div>
+      <div class="projects">
+        <section class="project-cards">
+            <div class="card1">
+                <div class="card1-img"></div>
+                <h2>"world"project:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <button class="live" onclick="world.org">live</button>
+                <button class="live" onclick="world.org">github</button>
+            </div>
+            <div class="card2">
+                <div class="card2-img"></div>
+                <h2>"sweet"project:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                <button class="live" onclick="sweet.org">live</button>
+                <button class="live" onclick="sweet.org">github</button>
+            </div>
+            <div class="card3">
+                <div class="card3-img"></div>
+                <h2>"viva"project:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                <button class="live" onclick="viva.com">live</button>
+                <button class="live" onclick="viva.com">github</button>
+            </div>
+            <div class="card4">
+                <div class="card4-img"></div>
+                <h2>"setup"project:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                <button class="live" onclick="world.org">live</button>
+                <button class="live" onclick="world.org">github</button>
+            </div>
+            <div class="card5">
+                <div class="card5-img"></div>
+                <h2>"blubb"project:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Lorem ipsum dolor.</p>
+                <button class="live" onclick="world.org">live</button>
+                <button class="live" onclick="world.org">github</button>
+            </div>
+        </section>
       </div>
 
     </main>
