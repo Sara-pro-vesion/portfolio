@@ -196,13 +196,14 @@
             grid-template-columns: repeat(4, 1fr);
             grid-row: 1fr, 1fr;
             gap: 1rem;
-            padding: 8rem;
-            padding-bottom: 20rem;
-            gap: 1rem;
+            padding: 0 8rem 0 8rem;
+            gap:calc(8px *2);
+            font-family: "lora", serif;
+            transition:transform 0.3s ease, opacity 0.3s ease;
         }
         .card1, .card2, .card3, .card4, .card5 {
-            background-color: #1E2A4A;
-            border-radius: 10px;
+            background-color: #1e2a4aa2;
+            border-radius: 13px;
             padding: 1rem;
             color: #d1cfcf;
             text-align: left;
@@ -219,6 +220,38 @@
         }
         .card3-img  {
             height: 400px;
+        }
+        .project-cards h2 {
+            font-family: "caprasimo", sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: #f0f3f8e1;
+            text-shadow: 0 0 2px rgba(61, 255, 219, 0.596);
+        }
+        .project-cards p{
+            font-family: "lora" ,serif;
+            color: #dddfddbb;
+            font-size: 1rem;
+            line-height: 150%;
+        }
+        .project-cards button {
+           font-family: "caprasimo", sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #dfdbdb;
+            background-color: #3333;
+            border: 1px solid #dfdbdb;
+            padding: 5px 20px;
+            border-radius: 13px;
+            cursor: pointer;
+            margin-top: 8px;
+            margin-left: 0.5rem;
+        }
+        .project-cards button:hover {
+            background-color: #00ffd062;
+            color: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease
         }
         .card1 {
             grid-column: 1;
@@ -240,6 +273,15 @@
             grid-column: 3;
             grid-row: 2;
         }
+        .title1 {
+            font-family: 'Young Serif', sans-serif;
+            font-weight: 500;
+            font-size: calc(2.5*16px);
+            line-height: 100%;
+            text-align: left;
+            margin-left: 7rem;
+            color: #f0f3f8ea;
+        }
     </style>        
 </head>
 <body>
@@ -260,44 +302,40 @@
         <img src="photo_portfolio_rm_blue-removebg-preview.png">
       </div>
       <div class="projects">
+        <h1 class="title1">★Projects:</h1>
         <section class="project-cards">
             <div class="card1">
                 <div class="card1-img"></div>
                 <h2>"world"project:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.<br>Lorem ipsum dolor sit amet.</p>
                 <button class="live" onclick="world.org">live</button>
                 <button class="live" onclick="world.org">github</button>
             </div>
             <div class="card2">
                 <div class="card2-img"></div>
                 <h2>"sweet"project:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
                 <button class="live" onclick="sweet.org">live</button>
                 <button class="live" onclick="sweet.org">github</button>
             </div>
             <div class="card3">
                 <div class="card3-img"></div>
                 <h2>"viva"project:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
                 <button class="live" onclick="viva.com">live</button>
                 <button class="live" onclick="viva.com">github</button>
             </div>
             <div class="card4">
                 <div class="card4-img"></div>
                 <h2>"setup"project:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
                 <button class="live" onclick="world.org">live</button>
                 <button class="live" onclick="world.org">github</button>
             </div>
             <div class="card5">
                 <div class="card5-img"></div>
                 <h2>"blubb"project:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p>Lorem ipsum dolor.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> ipsum dolor.</p>
                 <button class="live" onclick="world.org">live</button>
                 <button class="live" onclick="world.org">github</button>
             </div>
