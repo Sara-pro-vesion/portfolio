@@ -179,7 +179,7 @@
                 transform: translate(80px, 80px);
             }
         }
-        .project-cards {
+        #project-cards {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-row: 1fr, 1fr;
@@ -209,20 +209,20 @@
         .card3-img  {
             height: 400px;
         }
-        .project-cards h2 {
+        #project-cards h2 {
             font-family: "caprasimo", sans-serif;
             font-weight: 500;
             font-size: 1.5rem;
             color: #f0f3f8e1;
             text-shadow: 0 0 2px rgba(61, 255, 219, 0.596);
         }
-        .project-cards p{
+        #project-cards p{
             font-family: "lora" ,serif;
             color: #dddfddbb;
             font-size: 1rem;
             line-height: 150%;
         }
-        .project-cards button {
+        #project-cards button {
            font-family: "caprasimo", sans-serif;
             font-size: 1rem;
             font-weight: 300;
@@ -235,7 +235,7 @@
             margin-top: 8px;
             margin-left: 0.5rem;
         }
-        .project-cards button:hover {
+        #project-cards button:hover {
             background-color: #00ffd062;
             color: #ffffff;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
